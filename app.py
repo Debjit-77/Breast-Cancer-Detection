@@ -19,7 +19,7 @@ def load_model():
     st.write(f"**Found .pkl files:** {pkl_files}")
     
     try:
-        model = joblib.load('breastcancermodel.pkl')
+        model = joblib.load('breast_cancer_model.pkl')
         scaler = joblib.load('scaler.pkl')
         st.success("✅ Model loaded successfully!")
         return model, scaler
@@ -31,3 +31,4 @@ def load_model():
         return None, None
 
 model, scaler = load_model()
+
